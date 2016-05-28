@@ -24,7 +24,7 @@ if msg.text == "/id" or msg.text == "/rules" or msg.text == "/help" or msg.text 
 	return "/modlist"
 end
 
-if msg.text == "/start then
+if msg.text == "/start" then
 	return " Hi \n This BOT Is Spammer \n\n Developer: @TelePublic "
 end
 
