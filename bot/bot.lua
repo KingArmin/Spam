@@ -54,7 +54,7 @@ function msg_valid(msg)
   -- Don't process outgoing messages
   if msg.out then
     print('\27[36mNot valid: msg from us\27[39m')
-    return false
+  --  return false
   end
 
   -- Before bot was started
@@ -73,15 +73,15 @@ function msg_valid(msg)
     return false
   end
 
---  if not msg.from.id then
---    print('\27[36mNot valid: From id not provided\27[39m')
---    return false
---  end
-
-  if msg.from.id == our_id then
-    print('\27[36mNot valid: Msg from our id\27[39m')
+  if not msg.from.id then
+    print('\27[36mNot valid: From id not provided\27[39m')
     return false
   end
+
+ --[[ if msg.from.id == our_id then
+    print('\27[36mNot valid: Msg from our id\27[39m')
+    return false
+  end--]]
 
   if msg.to.type == 'encr_chat' then
     print('\27[36mNot valid: Encrypted chat\27[39m')
@@ -212,29 +212,23 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    	"Flood",
-	"Spam",
-	"Join",
-	"Leave",
+    "Flood",
+    "Join",
+    "Leave",
+    "Spam",
     },
     sudo_users = {112840592},
     moderation = {data = 'data/moderation.json'},
     about_text = [[
 ]],
     help_text_realm = [[
-    
 /help
-
 ]],
     help_text = [[
-    
 /help
-
 ]],
 	help_text_super =[[
-	
 /help
-
 ]],
   }
   serialize_to_file(config, './data/config.lua')
