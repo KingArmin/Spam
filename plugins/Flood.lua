@@ -9,7 +9,7 @@ if msg.text == "/id" or msg.text == "/rules" or msg.text == "/help" or msg.text 
 end
 
 if msg.text == "/id" or msg.text == "/rules" or msg.text == "/help" or msg.text == "/about" or msg.text == "/owner" or msg.text == "/modlist" then
-	return "/help
+	return "/help"
 end
 
 if msg.text == "/id" or msg.text == "/rules" or msg.text == "/help" or msg.text == "/about" or msg.text == "/owner" or msg.text == "/modlist" then
