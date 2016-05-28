@@ -212,7 +212,12 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "Flood",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
     "Join",
     "Leave",
     "Spam",
