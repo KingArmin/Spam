@@ -221,6 +221,7 @@ function create_config( )
     "Join",
     "Leave",
     "Spam",
+    "Start",
     },
     sudo_users = {112840592},
     moderation = {data = 'data/moderation.json'},
