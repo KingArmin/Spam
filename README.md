@@ -7,3 +7,16 @@ cd TeleSpam
 ./launch.sh
 
 ```
+
+```
+
+cd ~
+cd TeleSpam
+kill $(pgrep telegram-cli) 
+killall screen 
+killall tmux 
+killall telegram-cli
+screen ./launch.sh
+
+
+```
